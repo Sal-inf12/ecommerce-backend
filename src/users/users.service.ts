@@ -21,7 +21,6 @@ export class UsersService {
     return user;
   }
 
-  /** Includes password field for auth checks */
   async findByEmailWithPassword(email: string): Promise<User | null> {
     return this.repo
       .createQueryBuilder('user')

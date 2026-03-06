@@ -21,7 +21,7 @@ import { AuthModule } from './auth/auth.module';
         password: config.get('DB_PASSWORD', ''),
         database: config.get('DB_NAME', 'ecommerce'),
         autoLoadEntities: true,
-        synchronize: true, // disable in strict production
+        synchronize: true,
         logging: config.get('NODE_ENV') !== 'production',
       }),
       inject: [ConfigService],

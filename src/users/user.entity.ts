@@ -25,7 +25,7 @@ export class User {
   @Column()
   lastName: string;
 
-  @Column({ select: false }) // never returned in queries by default
+  @Column({ select: false })
   password: string;
 
   @Column({ type: 'enum', enum: UserRole, default: UserRole.CUSTOMER })
